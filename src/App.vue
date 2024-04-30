@@ -24,20 +24,33 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-footer dark padless>
-      <v-card flat tile class="indigo lighten-1 white--text text-center">
-        <v-card-text>
-        Titulo
-        </v-card-text>
-
-        <v-card-text class="white--text pt-0">
-          Contenido
-        </v-card-text>
-
-        <v-divider></v-divider>
-
+    <v-footer color="primary lighten-1" padless>
+      <v-card flat tile class="primary lighten-1 text-center" id="App" style="max-width: 800px;">
         <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} — <strong>All rigths reserved</strong>
+          <ul>
+            <!-- Render ecosystem links -->
+            <li v-for="(item, index) in ecosystem" :key="index">
+              <a :href="item.href" class="white--text">{{ item.text }}</a>
+            </li>
+          </ul>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-text class="white--text">
+          <ul>
+            <!-- Render important links -->
+            <li v-for="(item, index) in importantLinks" :key="index">
+              <a :href="item.href" class="white--text">{{ item.text }}</a>
+            </li>
+          </ul>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-text class="white--text">
+          <ul>
+            <!-- Render 'what's next' links -->
+            <li v-for="(item, index) in whatsNext" :key="index">
+              <a :href="item.href" class="white--text">{{ item.text }}</a>
+            </li>
+          </ul>
         </v-card-text>
       </v-card>
     </v-footer>

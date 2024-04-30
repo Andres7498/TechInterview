@@ -46,6 +46,7 @@ export default {
           beer.alcohol.includes(this.searchString) ||
           beer.style.includes(this.searchString) ||
           beer.brand.includes(this.searchString))
+
       }
     }
   },
