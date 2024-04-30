@@ -1,13 +1,29 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <!-- App Bar content -->
+      <div class="d-flex align-center">
+        <v-img alt="Vuetify Logo" class="shrink mr-2" contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png" transition="scale-transition" width="40" />
+
+        <v-img alt="Vuetify Name" class="shrink mt-1 hidden-sm-and-down" contain min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png" width="100" />
+      </div>
+      <v-spacer></v-spacer>
+      <v-btn to="/" color="white" plain rounded>
+        Home
+      </v-btn>
+      <v-btn to="/about" color="white" plain rounded>
+        About
+      </v-btn>
+      <v-btn to="/data" color="white" plain rounded>
+        Data
+      </v-btn>
+
     </v-app-bar>
 
     <v-main>
       <router-view />
     </v-main>
-
     <v-footer color="primary lighten-1" padless>
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6" lg="4">
